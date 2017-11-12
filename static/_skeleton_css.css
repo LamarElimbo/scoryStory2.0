@@ -1,0 +1,80 @@
+.maintext {
+    border:  .1em solid white;
+    border-radius: .2em;
+    margin: 0 1em 1em 0; 
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: rgba(188, 214, 206, 0.89);
+    font-size: 1.25em;
+}
+
+.lamar_pic {
+    border: 1.5px solid gray;
+    border-radius: 50%;
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    background-color: #ffd5d6;
+}
+
+#header a {
+    color: #66033c;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+#header a:hover {
+    background-color:#ff084a;
+}
+
+#repoLogo {
+    position:absolute;
+    top:113px;
+    right:75px;
+    width:60px;
+}
+
+#visitRepoText {
+    position:absolute;
+    top:80px;
+    right:20px;
+    width:150px;
+    background-color:#ff084a;
+    color: white;
+    text-align: center;
+    border:  .1em solid black;
+    border-radius: .4em;
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -webkit-transform: rotate(10deg); /* Safari */
+    transform: rotate(10deg);
+}
+
+.maintext a {
+    color: #66033c;
+}
+
+.maintext a:hover {
+    color: #ff084a;
+}
+
+.maintext h2 {
+    color: #033b4c;
+}
+
+.maintext p {
+    color: #033b4c;
+}
+
+center b {
+    color:#66033c;
+}
+
+p, h3, .page-header{
+    color:aliceblue;
+}
+	
+.bodystyle {
+    background: #009899;
+}

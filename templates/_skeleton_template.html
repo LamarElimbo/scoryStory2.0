@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/_skeleton_css.css">
+    <link rel="stylesheet" href="{{css_source}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bodystyle">
+
+    <div id="header">
+        {% block header %}
+            {% if activeTab == 'home' %}
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="home" style="background-color:#009899;">Home</a></li>
+                    <li><a href="site_sleuth_search">Site Sleuth</a></li>
+                    <li><a href="spellbook_search">Spellbook</a></li>
+                    <li><a href="scory_story_v1">Scory Story 1.0</a></li>
+                    <li><a href="scory_story_v2">Scory Story 2.0</a></li>
+                </ul>
+            {% elif activeTab == 'site_sleuth' %}
+                <ul class="nav nav-tabs">
+                    <li><a href="home">Home</a></li>
+                    <li class="active"><a href="site_sleuth_search" style="background-color:#009899;">Site Sleuth</a></li>
+                    <li><a href="spellbook_search">Spellbook</a></li>
+                    <li><a href="scory_story_v1">Scory Story 1.0</a></li>
+                    <li><a href="scory_story_v2">Scory Story 2.0</a></li>
+                </ul>
+            {% elif activeTab == 'spellbook' %}
+                <ul class="nav nav-tabs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="site_sleuth_search">Site Sleuth</a></li>
+                    <li class="active"><a href="spellbook_search" style="background-color:#c63c31;">Spellbook</a></li>
+                    <li><a href="scory_story_v1">Scory Story 1.0</a></li>
+                    <li><a href="scory_story_v2">Scory Story 2.0</a></li>
+                </ul>
+            {% elif activeTab == 'scory_story_v1' %}
+                <ul class="nav nav-tabs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="site_sleuth_search">Site Sleuth</a></li>
+                    <li><a href="spellbook_search">Spellbook</a></li>
+                    <li class="active"><a href="scory_story_v1" style="background-color:#009899;">Scory Story 1.0</a></li>
+                    <li><a href="scory_story_v2">Scory Story 2.0</a></li>
+                </ul>
+            {% elif activeTab == 'scory_story_v2' %}
+                <ul class="nav nav-tabs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="site_sleuth_search">Site Sleuth</a></li>
+                    <li><a href="spellbook_search">Spellbook</a></li>
+                    <li><a href="scory_story_v1">Scory Story 1.0</a></li>
+                    <li class="active"><a href="scory_story_v2" style="background-color:#009899;">Scory Story 2.0</a></li>
+                </ul>
+            {% endif %}
+        {% endblock %}
+    </div>
+
+    <br><br><br>
+    
+    <div class="container">
+        {% if activeTab != 'home' %}
+        <a href="{{ repoLink }}">
+            <img src="../static/github_logo.png" id='repoLogo'>
+            <div id="visitRepoText"><strong>See what this app looks like in code!</strong></div>
+        </a>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
