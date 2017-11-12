@@ -1,61 +1,6 @@
 .maintext {
-    margin: 0 1em 1em 0; 
-    box-sizing: border-box;
-    padding: 1em;
-    font-size: 1.25em;
-}
-
-#header {
-    width: 100%;
-    height: 53px;
-    background-color: #ffd5d6;
-    border-bottom: 1px solid white;
-}
-
-#header a {
-    color: #66033c;
-    font-size: 22px;
-    letter-spacing: 2px;
-}
-
-#header a:hover {
-    background-color:#ff084a;
-}
-
-.lead h2 {
-    color: white;
-}
-
-.lead li {
-    color: white;
-}
-
-.lead a {
-    color: #66033c;
-}
-
-.lead a:hover {
-    color: #ff084a;
-}
-
-.maintext h2 {
-    color: #033b4c;
-}
-
-.maintext p {
-    color: #033b4c;
-}
-
-center b {
-    color:#66033c;
-}
-
-p, h3, .page-header{
-    color:aliceblue;
-}
-	
-.bodystyle {
     background: #009899;
+    border-color: #009899;
 }
 
 #phoneArea {
